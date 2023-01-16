@@ -23,3 +23,6 @@ insert into tb_resource (title, description, position, img_Uri, type, offer_id) 
 insert into tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) values ('Capítulo 1', 'Neste capítulo vamos começar com conceitos básicos', 1, '', 1, null);
 insert into tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) values ('Capítulo 2', 'Neste capítulo vamos continuar', 2, '', 1, 1);
 insert into tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) values ('Capítulo 3', 'Neste capítulo vamos finalizar', 3, '', 1, 2);
+
+insert into tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) values (1,1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z', null, true, false);
+insert into tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) values (2,1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z', null, true, false);

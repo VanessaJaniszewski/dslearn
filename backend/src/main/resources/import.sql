@@ -15,3 +15,7 @@ insert into tb_course (name, img_Uri, img_Gray_Uri) values ('Basic English', 'ht
 
 insert into tb_offer (edition, start_Moment, end_Moment, course_id) values ('1,0',TIMESTAMP WITH TIME ZONE '2022-07-01T03:00:00',TIMESTAMP WITH TIME ZONE '2023-07-01T03:00:00',1);
 insert into tb_offer (edition, start_Moment, end_Moment, course_id) values ('2,0',TIMESTAMP WITH TIME ZONE '2023-07-01T03:00:00',TIMESTAMP WITH TIME ZONE '2024-07-01T03:00:00',1);
+
+insert into tb_resource (title, description, position, img_Uri, type, offer_id) values ('Trilha HTML', 'Trilha princial do curso', 1, 'https://img.freepik.com/premium-photo/word-basic-consists-wooden-cubes-with-letters-top-view-light-background-work-space_284815-2974.jpg', 1, 1);
+insert into tb_resource (title, description, position, img_Uri, type, offer_id) values ('Forum', 'Tire suas dúvidas', 2, 'https://img.freepik.com/premium-photo/word-basic-consists-wooden-cubes-with-letters-top-view-light-background-work-space_284815-2974.jpg', 2, 1);
+insert into tb_resource (title, description, position, img_Uri, type, offer_id) values ('Lives', 'Lives exclusivas para a turma', 3, 'https://img.freepik.com/premium-photo/word-basic-consists-wooden-cubes-with-letters-top-view-light-background-work-space_284815-2974.jpg', 0, 1);

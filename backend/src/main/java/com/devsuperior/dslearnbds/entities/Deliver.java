@@ -35,8 +35,7 @@ public class Deliver implements Serializable {
 	@ManyToOne
 	@JoinColumns({  
 		@JoinColumn(name = "offer_id"), 
-		@JoinColumn(name = "user_id") 
-	})
+		@JoinColumn(name = "user_id") })
 	private Enrollment enrollment;
 
 	@ManyToOne

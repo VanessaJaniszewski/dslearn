@@ -24,10 +24,6 @@ insert into tb_section (title, description, position, img_Uri, resource_id, prer
 insert into tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) values ('Capítulo 2', 'Neste capítulo vamos continuar', 2, '', 1, 1);
 insert into tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) values ('Capítulo 3', 'Neste capítulo vamos finalizar', 3, '', 1, 2);
 
-INSERT INTO tb_deliver (uri, moment, status, feedback, correct_Count, lesson_id, user_id, offer_id) VALUES ('https://github.com/devsuperior/bds-dslearn', TIMESTAMP WITH TIME ZONE '2020-12-10T10:00:00Z', 0, null, null, 4, 1, 1);
-
-
-
 insert into tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) values (1,1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z', null, true, false);
 insert into tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) values (2,1, TIMESTAMP WITH TIME ZONE '2020-11-20T13:00:00Z', null, true, false);
 
@@ -59,3 +55,6 @@ INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUE
 
 INSERT INTO tb_topic_likes (topic_id, user_id) VALUES (1, 2);
 INSERT INTO tb_topic_likes (topic_id, user_id) VALUES (2, 1);
+
+INSERT INTO tb_deliver (uri, moment, status, feedback, correct_Count, lesson_id, user_id, offer_id) VALUES ('https://github.com/devsuperior/bds-dslearn', TIMESTAMP WITH TIME ZONE '2020-12-10T10:00:00Z', 0, null, null, 4, 1, 1);
+

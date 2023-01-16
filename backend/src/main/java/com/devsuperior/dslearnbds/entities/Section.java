@@ -1,8 +1,6 @@
 package com.devsuperior.dslearnbds.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.devsuperior.dslearnbds.entities.enums.ResourceType;
@@ -25,8 +22,8 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "tb_resource")
-public class Resource implements Serializable{
+@Table(name = "tb_section")
+public class Section implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -37,12 +34,12 @@ public class Resource implements Serializable{
 	private String description;
 	private Integer position;
 	private String imgUri;
-	private ResourceType type;
 	
 	@ManyToOne
-	@JoinColumn(name = "offer_id")
-	private Offer offer;
+	@JoinColumn (name = "resource_id")
+	private Resource resource;
 	
-	@OneToMany(mappedBy = "resource")
-	private List<Section> sections = new ArrayList<>();
+	@ManyToOne
+	@JoinColumn (name ="prerequisite_id")
+	private Section prerequisite;
 }

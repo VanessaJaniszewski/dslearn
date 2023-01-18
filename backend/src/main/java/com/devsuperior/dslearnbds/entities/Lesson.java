@@ -51,11 +51,10 @@ public abstract class Lesson implements Serializable{
 	@JoinColumn (name = "section_id")
 	private Section section;
 	
-	@OneToMany(mappedBy = "lessons")
+	@OneToMany(mappedBy = "lesson")
 	private List<Deliver> deliveries = new ArrayList<>();
 	
 	public Lesson(Long id, String title, Integer position, Section section) {
-		super();
 		this.id = id;
 		this.title = title;
 		this.position = position;
